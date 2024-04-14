@@ -1,0 +1,31 @@
+.vj-knob, .vj-toggle, .vj-button {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+.vj-knob__input, .vj-toggle__input, .vj-button__input {
+    --line-width: 10;
+    color: rgb(192, 192, 192);
+    --secondary-color: rgb(90, 90, 90);
+    width: 60px;
+    height: 60px;
+}
+
+.vj-control__label, vj-toggle__input, vj-button__input {
+    width: auto;
+    min-width: auto;
+    height: auto;
+    min-height: auto;
+}
+
+#knob-container {
+    align-items: center;
+}
+
+#knob-container Label {
+    -unity-text-align: middle-center;
+    margin: 4px;
+    padding: 0;
+    color: rgb(255, 255, 255);
+}

@@ -1,0 +1,67 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Scripts/Knob.uss?fileID=7433441132597879392&amp;guid=363f605b3a3d341169dd49ed21c614b1&amp;type=3#Knob" />
+    <engine:VisualElement name="root" data-source-type="KnobTest, Assembly-CSharp" style="flex-direction: column-reverse; flex-grow: 1; margin-top: 40px; margin-right: 40px; margin-bottom: 40px; margin-left: 40px;">
+        <engine:VisualElement name="knob-row" style="flex-direction: row; justify-content: space-evenly;">
+            <engine:VisualElement name="knob-container">
+                <VJUI.VJKnob label="Knob 1" high-value="360">
+                    <Bindings>
+                        <engine:DataBinding property="value" data-source-path="Parameter1" binding-mode="TwoWay" />
+                    </Bindings>
+                </VJUI.VJKnob>
+                <engine:Label text="0.00">
+                    <Bindings>
+                        <engine:DataBinding property="text" data-source-path="Parameter1" binding-mode="ToTarget" source-to-ui-converters="Knob 0-100" />
+                    </Bindings>
+                </engine:Label>
+            </engine:VisualElement>
+            <engine:VisualElement name="knob-container">
+                <VJUI.VJKnob label="Knob 2" high-value="360">
+                    <Bindings>
+                        <engine:DataBinding property="value" data-source-path="Parameter2" binding-mode="TwoWay" />
+                    </Bindings>
+                </VJUI.VJKnob>
+                <engine:Label text="0.00">
+                    <Bindings>
+                        <engine:DataBinding property="text" data-source-path="Parameter2" binding-mode="ToTarget" source-to-ui-converters="Knob 0-100" />
+                    </Bindings>
+                </engine:Label>
+            </engine:VisualElement>
+            <engine:VisualElement name="knob-container">
+                <VJUI.VJKnob label="Knob 3" high-value="360">
+                    <Bindings>
+                        <engine:DataBinding property="value" data-source-path="Parameter3" binding-mode="TwoWay" />
+                    </Bindings>
+                </VJUI.VJKnob>
+                <engine:Label text="0.00">
+                    <Bindings>
+                        <engine:DataBinding property="text" data-source-path="Parameter3" binding-mode="ToTarget" source-to-ui-converters="Knob 0-100" />
+                    </Bindings>
+                </engine:Label>
+            </engine:VisualElement>
+            <engine:VisualElement name="knob-container">
+                <VJUI.VJToggle label="Toggle 1" value="true">
+                    <Bindings>
+                        <engine:DataBinding property="value" data-source-path="Toggle1" binding-mode="TwoWay" />
+                    </Bindings>
+                </VJUI.VJToggle>
+                <engine:Label text="False">
+                    <Bindings>
+                        <engine:DataBinding property="text" data-source-path="Toggle1" binding-mode="ToTarget" />
+                    </Bindings>
+                </engine:Label>
+            </engine:VisualElement>
+            <engine:VisualElement name="knob-container">
+                <VJUI.VJButton label="Button 1">
+                    <Bindings>
+                        <engine:DataBinding property="value" data-source-path="Button1" binding-mode="TwoWay" />
+                    </Bindings>
+                </VJUI.VJButton>
+                <engine:Label text="False">
+                    <Bindings>
+                        <engine:DataBinding property="text" data-source-path="Button1" binding-mode="ToTarget" />
+                    </Bindings>
+                </engine:Label>
+            </engine:VisualElement>
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>
