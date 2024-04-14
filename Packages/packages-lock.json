@@ -133,6 +133,12 @@
         "com.unity.modules.imgui": "1.0.0"
       }
     },
+    "jp.keijiro.vjuitk": {
+      "version": "file:jp.keijiro.vjuitk",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "com.unity.modules.hierarchycore": {
       "version": "1.0.0",
       "depth": 1,

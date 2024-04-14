@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace VJUI {
+namespace VJUITK {
 
 [UxmlElement]
 public partial class VJKnob : BaseField<float>
@@ -51,4 +51,4 @@ public partial class VJKnob : BaseField<float>
     #endregion
 }
 
-} // namespace VJUI
+} // namespace VJUITK

@@ -18,14 +18,3 @@
     height: auto;
     min-height: auto;
 }
-
-#knob-container {
-    align-items: center;
-}
-
-#knob-container Label {
-    -unity-text-align: middle-center;
-    margin: 4px;
-    padding: 0;
-    color: rgb(255, 255, 255);
-}

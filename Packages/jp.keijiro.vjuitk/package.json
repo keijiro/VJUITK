@@ -1,0 +1,13 @@
+{
+  "author": "Keijiro Takahashi",
+  "dependencies": {},
+  "description": "UI Toolkit custom controls for VJing",
+  "displayName": "VJUI for UI Toolkit",
+  "keywords": [ "unity" ],
+  "license": "Unlicense",
+  "name": "jp.keijiro.vjuitk",
+  "repository": "github:keijiro/VJUITK",
+  "unity": "6000.0",
+  "unityRelease": "0f1",
+  "version": "1.0.0"
+}

@@ -1,15 +1,15 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace VJUI {
+namespace VJUITK {
 
-public sealed class VJClicker : PointerManipulator
+sealed class VJDragger : PointerManipulator
 {
     #region Private variables
 
-    IVJBoolState _state;
-    bool _isToggle;
+    VJKnob _knob;
     int _pointerID;
+    (Vector3 origin, float value) _start;
 
     bool IsActive => _pointerID >= 0;
 
@@ -17,21 +17,23 @@ public sealed class VJClicker : PointerManipulator
 
     #region PointerManipulator implementation
 
-    public VJClicker(IVJBoolState state, bool isToggle)
+    public VJDragger(VJKnob knob)
     {
-        (_state, _isToggle, _pointerID) = (state, isToggle, -1);
+        (_knob, _pointerID) = (knob, -1);
         activators.Add(new ManipulatorActivationFilter{button = MouseButton.LeftMouse});
     }
 
     protected override void RegisterCallbacksOnTarget()
     {
         target.RegisterCallback<PointerDownEvent>(OnPointerDown);
+        target.RegisterCallback<PointerMoveEvent>(OnPointerMove);
         target.RegisterCallback<PointerUpEvent>(OnPointerUp);
     }
 
     protected override void UnregisterCallbacksFromTarget()
     {
         target.UnregisterCallback<PointerDownEvent>(OnPointerDown);
+        target.UnregisterCallback<PointerMoveEvent>(OnPointerMove);
         target.UnregisterCallback<PointerUpEvent>(OnPointerUp);
     }
 
@@ -47,10 +49,21 @@ public sealed class VJClicker : PointerManipulator
         }
         else if (CanStartManipulation(e))
         {
-            if (!_isToggle) _state.value = true;
+            _start = (e.localPosition, _knob.value);
             target.CapturePointer(_pointerID = e.pointerId);
             e.StopPropagation();
         }
+    }
+
+    void OnPointerMove(PointerMoveEvent e)
+    {
+        if (!IsActive || !target.HasPointerCapture(_pointerID)) return;
+
+        var diff = e.localPosition - _start.origin;
+        var delta = (diff.x - diff.y) * _knob.sensitivity / 100;
+        _knob.value = _start.value + delta * (_knob.highValue - _knob.lowValue);
+
+        e.StopPropagation();
     }
 
     void OnPointerUp(PointerUpEvent e)
@@ -59,7 +72,6 @@ public sealed class VJClicker : PointerManipulator
 
         if (CanStopManipulation(e))
         {
-            _state.value = _isToggle ? !_state.value : false;
             _pointerID = -1;
             target.ReleaseMouse();
             e.StopPropagation();
@@ -69,4 +81,4 @@ public sealed class VJClicker : PointerManipulator
     #endregion
 }
 
-} // namespace VJUI
+} // namespace VJUITK

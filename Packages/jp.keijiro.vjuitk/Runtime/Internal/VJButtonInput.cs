@@ -1,9 +1,9 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace VJUI {
+namespace VJUITK {
 
-public partial class VJButtonInput : VisualElement
+partial class VJButtonInput : VisualElement
 {
     #region USS class name
 
@@ -62,4 +62,4 @@ public partial class VJButtonInput : VisualElement
     #endregion
 }
 
-} // namespace VJUI
+} // namespace VJUITK

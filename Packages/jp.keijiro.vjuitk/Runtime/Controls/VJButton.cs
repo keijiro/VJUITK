@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace VJUI {
+namespace VJUITK {
 
 [UxmlElement]
 public partial class VJButton : BaseField<bool>, IVJBoolState
@@ -37,4 +37,4 @@ public partial class VJButton : BaseField<bool>, IVJBoolState
     #endregion
 }
 
-} // namespace VJUI
+} // namespace VJUITK
