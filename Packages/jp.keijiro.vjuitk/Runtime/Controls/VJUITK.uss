@@ -13,6 +13,7 @@
 }
 
 .vj-knob__label, .vj-toggle__label, .vj-button__label {
+    color: rgb(192, 192, 192);
     width: auto;
     min-width: auto;
     height: auto;
