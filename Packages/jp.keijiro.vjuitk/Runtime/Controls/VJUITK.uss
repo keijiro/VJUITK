@@ -12,7 +12,7 @@
     height: 60px;
 }
 
-.vj-control__label, vj-toggle__input, vj-button__input {
+.vj-knob__label, .vj-toggle__label, .vj-button__label {
     width: auto;
     min-width: auto;
     height: auto;
