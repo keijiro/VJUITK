@@ -1,8 +1,8 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Packages/jp.keijiro.vjuitk/Runtime/VJUITK.uss?fileID=7433441132597879392&amp;guid=363f605b3a3d341169dd49ed21c614b1&amp;type=3#VJUITK" />
-    <Style src="project://database/Assets/Test.uss?fileID=7433441132597879392&amp;guid=b8d3a9bcf9de246179efb77ed0c35c3d&amp;type=3#Test" />
-    <engine:VisualElement name="root" data-source-type="Test, Assembly-CSharp" style="flex-direction: column-reverse; flex-grow: 1; margin-top: 40px; margin-right: 40px; margin-bottom: 40px; margin-left: 40px;">
-        <engine:VisualElement name="knob-row" style="flex-direction: row; justify-content: space-evenly;">
+    <Style src="project://database/Packages/jp.keijiro.vjuitk/Runtime/Controls/VJUITK.uss?fileID=7433441132597879392&amp;guid=363f605b3a3d341169dd49ed21c614b1&amp;type=3#VJUITK" />
+    <Style src="project://database/Assets/Test/Test.uss?fileID=7433441132597879392&amp;guid=b8d3a9bcf9de246179efb77ed0c35c3d&amp;type=3#Test" />
+    <engine:VisualElement name="root" data-source-type="Test, Assembly-CSharp" style="flex-grow: 1; margin-top: 40px; margin-right: 40px; margin-bottom: 40px; margin-left: 40px;">
+        <engine:VisualElement name="row1" style="flex-direction: row; flex-grow: 1;">
             <engine:VisualElement name="knob-container">
                 <VJUITK.VJKnob label="Knob 1" high-value="360">
                     <Bindings>
@@ -63,6 +63,14 @@
                     </Bindings>
                 </engine:Label>
             </engine:VisualElement>
+        </engine:VisualElement>
+        <engine:VisualElement name="row2" style="flex-grow: 1; flex-direction: row;">
+            <VJUITK.VJButton label="Button" />
+            <VJUITK.VJButton />
+            <VJUITK.VJKnob label="Knob" />
+            <VJUITK.VJKnob />
+            <VJUITK.VJToggle label="Toggle" />
+            <VJUITK.VJToggle />
         </engine:VisualElement>
     </engine:VisualElement>
 </engine:UXML>
