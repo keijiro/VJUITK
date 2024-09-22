@@ -1,6 +1,6 @@
 {
   "author": "Keijiro Takahashi",
-  "dependencies": {},
+  "dependencies": { "com.unity.modules.uielements": "1.0.0" },
   "description": "UI Toolkit custom controls for VJing",
   "displayName": "VJUI for UI Toolkit",
   "keywords": [ "unity" ],
@@ -9,5 +9,5 @@
   "repository": "github:keijiro/VJUITK",
   "unity": "6000.0",
   "unityRelease": "0f1",
-  "version": "1.0.0"
+  "version": "1.0.1"
 }
