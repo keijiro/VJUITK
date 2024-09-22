@@ -16,6 +16,8 @@ This package is a port of the original [VJUI], which was developed for Unity UI
 - Knob
 - Toggle
 
+To use these controls, make sure to apply the custom stylesheet (`VJUITK.uss`).
+
 ## System Requirements
 
 - Unity 6
