@@ -1,5 +1,7 @@
 # VJUI for UI Toolkit
 
+![gif](https://github.com/user-attachments/assets/951adfee-f417-4389-968a-44ffcee1f131)
+
 **VJUI for UI Toolkit** is a set of custom controls designed for VJing, built
 using Unity's UI Toolkit.
 
