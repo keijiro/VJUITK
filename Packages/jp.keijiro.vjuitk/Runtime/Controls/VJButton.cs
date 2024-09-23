@@ -13,9 +13,20 @@ public partial class VJButton : BaseField<bool>, IVJBoolState
 
     #endregion
 
+    #region Public events
+
+    public event System.Action Clicked
+    {
+        add => _clicker.Clicked += value;
+        remove => _clicker.Clicked -= value;
+    }
+
+    #endregion
+
     #region Visual element implementation
 
     VJButtonInput _input;
+    VJClicker _clicker;
 
     public VJButton() : this(null) {}
 
@@ -24,7 +35,8 @@ public partial class VJButton : BaseField<bool>, IVJBoolState
         AddToClassList(ussClassName);
         labelElement.AddToClassList(labelUssClassName);
         _input = (VJButtonInput)this.Q(className: VJButtonInput.ussClassName);
-        _input.AddManipulator(new VJClicker(this, isToggle: false));
+        _clicker = new VJClicker(this, isToggle: false);
+        _input.AddManipulator(_clicker);
     }
 
     public override void SetValueWithoutNotify(bool newValue)

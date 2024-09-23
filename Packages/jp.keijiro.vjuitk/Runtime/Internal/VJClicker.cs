@@ -5,6 +5,12 @@ namespace VJUITK {
 
 sealed class VJClicker : PointerManipulator
 {
+    #region Public events
+
+    public event System.Action Clicked;
+
+    #endregion
+
     #region Private variables
 
     IVJBoolState _state;
@@ -63,6 +69,7 @@ sealed class VJClicker : PointerManipulator
             _pointerID = -1;
             target.ReleaseMouse();
             e.StopPropagation();
+            Clicked?.Invoke();
         }
     }
 
