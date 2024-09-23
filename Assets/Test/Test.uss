@@ -4,7 +4,7 @@
 
 #knob-container > Label {
     -unity-text-align: middle-center;
-    margin: 4px;
+    margin: -8px 0 0 0;
     padding: 0;
     color: rgb(192, 192, 192);
 }
