@@ -9,13 +9,32 @@ public partial class VJKnob : BaseField<float>
     #region Public UI properties
 
     [UxmlAttribute]
-    public float lowValue { get; set; } = 0;
+    public float lowValue { get => _lowValue; set => SetLowValue(value); }
 
     [UxmlAttribute]
-    public float highValue { get; set; } = 100;
+    public float highValue { get => _highValue; set => SetHighValue(value); }
 
     [UxmlAttribute]
     public float sensitivity { get; set; } = 1;
+
+    #endregion
+
+    #region Property backend
+
+    float _lowValue = 0;
+    float _highValue = 100;
+
+    void SetLowValue(float value)
+    {
+        _lowValue = value;
+        SetValueWithoutNotify(this.value);
+    }
+
+    void SetHighValue(float value)
+    {
+        _highValue = value;
+        SetValueWithoutNotify(this.value);
+    }
 
     #endregion
 
