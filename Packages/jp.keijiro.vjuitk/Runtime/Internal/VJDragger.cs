@@ -9,7 +9,7 @@ sealed class VJDragger : PointerManipulator
 
     VJKnob _knob;
     int _pointerID;
-    (Vector3 origin, float value) _start;
+    (Vector3 origin, float value, bool ready) _start;
 
     bool IsActive => _pointerID >= 0;
 
@@ -49,7 +49,11 @@ sealed class VJDragger : PointerManipulator
         }
         else if (CanStartManipulation(e))
         {
-            _start = (e.localPosition, _knob.value);
+#if VJUITK_INITIAL_MOVEMENT_REJECTION
+            _start.ready = false;
+#else
+            _start = (e.localPosition, _knob.value, true);
+#endif
             target.CapturePointer(_pointerID = e.pointerId);
             e.StopPropagation();
         }
@@ -58,6 +62,8 @@ sealed class VJDragger : PointerManipulator
     void OnPointerMove(PointerMoveEvent e)
     {
         if (!IsActive || !target.HasPointerCapture(_pointerID)) return;
+
+        if (!_start.ready) _start = (e.localPosition, _knob.value, true);
 
         var diff = e.localPosition - _start.origin;
         var delta = (diff.x - diff.y) * _knob.sensitivity / 100;
