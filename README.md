@@ -1,9 +1,9 @@
-# VJUI for UI Toolkit
+# VJUITK (VJUI for UI Toolkit)
 
 ![gif](https://github.com/user-attachments/assets/951adfee-f417-4389-968a-44ffcee1f131)
 
-**VJUI for UI Toolkit** is a set of custom controls designed for VJing, built
-using Unity's UI Toolkit.
+**VJUITK** (VJUI for UI Toolkit) is a set of custom controls designed for
+VJing, built using Unity's UI Toolkit.
 
 This package is a port of the original [VJUI], which was developed for Unity UI
 (uGUI).
@@ -25,9 +25,22 @@ To use these controls, make sure to apply the custom stylesheet (`VJUITK.uss`).
 
 ## Installation
 
-To install the VJUI for UI Toolkit package, first [follow those instructions]
-to set up the scoped registry. After that, the package can be installed via the
-Unity Package Manager.
+The VJUITK package (`jp.keijiro.vjuitk`) can be installed via the "Keijiro"
+scoped registry using Package Manager. To add the registry to your project,
+please follow [these instructions].
 
-[follow those instructions]:
+[these instructions]:
   https://gist.github.com/keijiro/f8c7e8ff29bfe63d86b888901b82644c
+
+## Touch Input Enhancements
+
+VJUITK provides an **Initial Movement Rejection** option to reduce initial
+resistance in touch drag inputs, which is espacially noticeable on iPhone.
+
+The iOS input system applies a movement threshold to distinguish between a
+stationary touch and a dragging touch, which can cause a sudden jump in initial
+movements. The **Initial Movement Rejection** option mitigates thie issue by
+rejecting abrupt initla movments.
+
+To enable this feature, add `VJUITK_INITIAL_MOVEMENT_REJECTION` to Scripting
+Defines in the Player Settings or a build profile for iPhone builds.
