@@ -37,10 +37,12 @@ please follow [these instructions].
 VJUITK provides an **Initial Movement Rejection** option to reduce initial
 resistance in touch drag inputs, which is espacially noticeable on iPhone.
 
+![gif](https://github.com/user-attachments/assets/d47d58c3-770e-4c55-acbb-b5d714a9ed82)
+
 The iOS input system applies a movement threshold to distinguish between a
 stationary touch and a dragging touch, which can cause a sudden jump in initial
 movements. The **Initial Movement Rejection** option mitigates thie issue by
-rejecting abrupt initla movments.
+rejecting abrupt initial movments.
 
 To enable this feature, add `VJUITK_INITIAL_MOVEMENT_REJECTION` to Scripting
 Defines in the Player Settings or a build profile for iPhone builds.
