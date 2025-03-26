@@ -1,0 +1,85 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Benchmark/Benchmark.uss?fileID=7433441132597879392&amp;guid=753c0decbcabc4166874dce564ff763e&amp;type=3#Benchmark" />
+    <engine:VisualElement name="root" style="flex-grow: 1; align-items: center; justify-content: center;">
+        <engine:VisualElement name="tracks" style="flex-direction: row;">
+            <engine:VisualElement name="track1" class="trackColumn">
+                <VJUITK.VJKnob label="High" />
+                <VJUITK.VJKnob label="Mid" />
+                <VJUITK.VJKnob label="Low" />
+                <VJUITK.VJButton label="Select" />
+                <VJUITK.VJToggle label="Solo" />
+                <VJUITK.VJToggle label="Mute" />
+                <VJUITK.VJKnob label="Level" />
+            </engine:VisualElement>
+            <engine:VisualElement name="track2" class="trackColumn">
+                <VJUITK.VJKnob label="High" />
+                <VJUITK.VJKnob label="Mid" />
+                <VJUITK.VJKnob label="Low" />
+                <VJUITK.VJButton label="Select" />
+                <VJUITK.VJToggle label="Solo" />
+                <VJUITK.VJToggle label="Mute" />
+                <VJUITK.VJKnob label="Level" />
+            </engine:VisualElement>
+            <engine:VisualElement name="track3" class="trackColumn">
+                <VJUITK.VJKnob label="High" />
+                <VJUITK.VJKnob label="Mid" />
+                <VJUITK.VJKnob label="Low" />
+                <VJUITK.VJButton label="Select" />
+                <VJUITK.VJToggle label="Solo" />
+                <VJUITK.VJToggle label="Mute" />
+                <VJUITK.VJKnob label="Level" />
+            </engine:VisualElement>
+            <engine:VisualElement name="track4" class="trackColumn">
+                <VJUITK.VJKnob label="High" />
+                <VJUITK.VJKnob label="Mid" />
+                <VJUITK.VJKnob label="Low" />
+                <VJUITK.VJButton label="Select" />
+                <VJUITK.VJToggle label="Solo" />
+                <VJUITK.VJToggle label="Mute" />
+                <VJUITK.VJKnob label="Level" />
+            </engine:VisualElement>
+            <engine:VisualElement name="track5" class="trackColumn">
+                <VJUITK.VJKnob label="High" />
+                <VJUITK.VJKnob label="Mid" />
+                <VJUITK.VJKnob label="Low" />
+                <VJUITK.VJButton label="Select" />
+                <VJUITK.VJToggle label="Solo" />
+                <VJUITK.VJToggle label="Mute" />
+                <VJUITK.VJKnob label="Level" />
+            </engine:VisualElement>
+            <engine:VisualElement name="track6" class="trackColumn">
+                <VJUITK.VJKnob label="High" />
+                <VJUITK.VJKnob label="Mid" />
+                <VJUITK.VJKnob label="Low" />
+                <VJUITK.VJButton label="Select" />
+                <VJUITK.VJToggle label="Solo" />
+                <VJUITK.VJToggle label="Mute" />
+                <VJUITK.VJKnob label="Level" />
+            </engine:VisualElement>
+            <engine:VisualElement name="track7" class="trackColumn">
+                <VJUITK.VJKnob label="High" />
+                <VJUITK.VJKnob label="Mid" />
+                <VJUITK.VJKnob label="Low" />
+                <VJUITK.VJButton label="Select" />
+                <VJUITK.VJToggle label="Solo" />
+                <VJUITK.VJToggle label="Mute" />
+                <VJUITK.VJKnob label="Level" />
+            </engine:VisualElement>
+            <engine:VisualElement name="track8" class="trackColumn">
+                <VJUITK.VJKnob label="High" />
+                <VJUITK.VJKnob label="Mid" />
+                <VJUITK.VJKnob label="Low" />
+                <VJUITK.VJButton label="Select" />
+                <VJUITK.VJToggle label="Solo" />
+                <VJUITK.VJToggle label="Mute" />
+                <VJUITK.VJKnob label="Level" />
+            </engine:VisualElement>
+            <engine:VisualElement name="master" style="flex-direction: column-reverse; margin-top: 30px; margin-right: 30px; margin-bottom: 30px; margin-left: 30px;">
+                <engine:VisualElement style="flex-direction: row; background-color: rgba(0, 0, 0, 0.37); border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px;">
+                    <VJUITK.VJKnob label="Effect" />
+                    <VJUITK.VJKnob label="Main" />
+                </engine:VisualElement>
+            </engine:VisualElement>
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>
