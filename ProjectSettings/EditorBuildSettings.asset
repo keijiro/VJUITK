@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Test.unity
+    path: Assets/Cube/Cube.unity
     guid: 33102945b425844fab48753ad2127417
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

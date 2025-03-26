@@ -6,7 +6,7 @@ using Unity.Properties;
 using UnityEditor;
 #endif
 
-public sealed class Test : MonoBehaviour
+public sealed class Cube : MonoBehaviour
 {
     [CreateProperty]
     public float Parameter1 { get; set; }
